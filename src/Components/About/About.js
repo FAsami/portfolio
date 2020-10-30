@@ -18,7 +18,7 @@ function About() {
         >
             <h3 className="text-center pb-3">About </h3>
 
-            <div className="card p-5  border-secondary">
+            <div className="card p-5 card-shadow">
                 <div className='d-flex justify-content-center'>
                     <img src={image} className='image-fluid person-img' alt="Foysal Ahammed" />
                 </div>

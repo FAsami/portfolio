@@ -5,7 +5,7 @@ function Project(props) {
     const { github, website, image, title, description } = props.project;
     return (
         <div className="col-md-6 my-3">
-            <div className="card  p-4">
+            <div className="card card-shadow p-4">
                 <div>
                     <img src={image} className='portfolio-img w-100 border' alt={title} />
                 </div>

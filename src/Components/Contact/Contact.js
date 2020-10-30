@@ -24,7 +24,7 @@ function Contact() {
         >
             <h3 className="text-center pt-3">Contact</h3>
 
-            <div className="card p-5 mt-3">
+            <div className="card card-shadow p-5 mt-3">
                 {notification && <div className={`alert alert-${notification.type}`}>{notification.msg}</div>}
                 <h3 className="text-center">Send your message</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>

@@ -25,7 +25,7 @@ function Home() {
                         className='header-name'>Hi! I'm Foysal
                      </motion.h1>
                     <p className='text-muted'>Front end web Developer</p>
-                    <Link to='/contact'><button className="btn btn-outline-dark rounded-0 mr-1 mb-3">HIRE ME</button></Link>
+                    <Link to='/contact'><button className="btn btn-dark rounded-0 mr-1 mb-3">HIRE ME</button></Link>
                     <Link to='/portfolio'><button className="btn btn-outline-dark rounded-0 mb-3 pr-4">PORTFOLIO</button></Link>
                     <SocialLink />
                 </div>

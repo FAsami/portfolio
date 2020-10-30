@@ -4,8 +4,8 @@ export const projectData = [
         title: 'Creative Agency',
         description: "Creative agency is a single page application for an Agency who provides IT services",
         image: './image/portfolio/creative-agency.JPG',
-        github: 'https://github.com/FAsami/',
-        website: 'https://hot-onion-fasami.web.app/'
+        github: 'https://github.com/FAsami/creative-agency-client',
+        website: 'https://creative-agency-fasami.web.app/'
     },
     {
         id: 1,
