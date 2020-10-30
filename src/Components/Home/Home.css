@@ -1,0 +1,18 @@
+.home-container{
+    height : 100vh;
+    width: 100vw;
+    background-image:linear-gradient( 
+        to right bottom,
+        rgba(233, 233, 233, 0.911),
+        rgba(206, 212, 210, 0.877)),
+        url('../../img/water.png');
+    background-size: cover;
+}
+.header-name {
+    color: #0A3D62;
+}
+.personal-image{
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #30336B;
+}

@@ -1,24 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css"
+import './App.css'
+import Home from './Components/Home/Home';
+import Sidebar from './Components/Sidebar/Sidebar';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Contact from './Components/Contact/Contact';
+import Portfolio from './Components/Portfolio/Portfolio';
+import Blogs from './Components/Blogs/Blogs';
+import DownloadCV from './Components/DownloadCV/DownloadCV';
+import About from './Components/About/About';
+import NotFound from './Components/NotFound/NotFound';
+import Logo from './Components/Logo/Logo';
+import { AnimatePresence } from 'framer-motion';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='root-container'>
+      <BrowserRouter>
+        <DownloadCV />
+        <Sidebar />
+        <Logo />
+        <AnimatePresence>
+          <Switch>
+            <Route exact path='/'><Home /></Route>
+            <Route path='/contact'><Contact /></Route>
+            <Route path='/portfolio'><Portfolio /></Route>
+            <Route path='/blogs'><Blogs /></Route>
+            <Route path='/about'><About /></Route>
+            <Route path='*'><NotFound /></Route>
+          </Switch>
+        </AnimatePresence>
+      </BrowserRouter>
     </div>
   );
 }
