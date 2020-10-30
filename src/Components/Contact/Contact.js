@@ -1,26 +1,15 @@
 import React, { useState } from 'react'
 import SocialLink from '../About/SocialLink';
 import { useForm } from "react-hook-form";
-import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
+import { sendEmail } from './sendmail';
 
 function Contact() {
     const { register, handleSubmit, errors } = useForm();
     const [notification, setNotification] = useState({});
 
     const onSubmit = (data, e) => {
-        emailjs.sendForm('service_zkv0pzh', 'template_53k1t8i', e.target, 'user_44SfA9a2DcUOyBra8BV5h')
-            .then((result) => {
-                if (result.text === 'OK') {
-                    setNotification({ type: 'success', msg: 'Message sent successfully' });
-                    setTimeout(() => setNotification({}), 2000)
-                }
-                e.target.reset();
-            }, (error) => {
-                setNotification({ type: 'danger', msg: 'Something went wrong! Please try again' });
-                setTimeout(() => setNotification({}), 2000);
-                e.target.reset();
-            });
+        sendEmail(e, setNotification);
     };
 
     const inputFieldClass = 'form-control mb-2 border-dark py-4 rounded-0';
@@ -33,11 +22,11 @@ function Contact() {
             exit={{ opacity: 0 }}
             transition={{ delay: 0.2 }}
         >
-            <div className="card p-5 mt-3"
-            >
+            <h3 className="text-center pt-3">Contact</h3>
 
+            <div className="card p-5 mt-3">
                 {notification && <div className={`alert alert-${notification.type}`}>{notification.msg}</div>}
-                <h3 className="text-center py-3">Send your message</h3>
+                <h3 className="text-center">Send your message</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input
                         type="text"
