@@ -7,13 +7,13 @@ import { motion } from 'framer-motion';
 function Home() {
     return (
         <motion.div
-            className='home-container bg-light d-flex justify-content-center align-items-center'
+            className='home-container bg-light d-flex justify-content-center align-items-center sidebar-gap'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ delay: 0.2 }}
         >
-            <div className='d-md-flex align-items-center' style={{ marginLeft: '100px' }}>
+            <div className='d-md-flex align-items-center'>
                 <div>
                     <img src={image} className='personal-image' alt="Foysal Ahammed" />
                 </div>

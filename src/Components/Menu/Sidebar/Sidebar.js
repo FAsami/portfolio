@@ -8,8 +8,8 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 function Sidebar() {
     const { pathname } = useLocation();
     return (
-        <div className='sidebar text-center'>
-            <ul>
+        <div className=' d-none d-md-block sidebar text-center'>
+            <ul style={{ paddingLeft: '15px', paddingRight: '0px' }}>
                 <li>
                     <Link className={pathname === '/' ? 'activePage' : null} to='/' ><AiFillHome size='23px' /><br />
                         <small className='icon-text'>HOME</small>
@@ -21,13 +21,14 @@ function Sidebar() {
                     </NavLink>
                 </li>
                 <li>
+                    <NavLink activeClassName='activePage' to='/about'>
+                        <BsFillPersonFill size='23px' /> <br />
+                        <small className='icon-text'>ABOUT</small> </NavLink>
+                </li>
+                <li>
                     <NavLink activeClassName='activePage' to='/contact'><FaEnvelope size='23px' /><br />
                         <small className='icon-text'>CONTACT</small>
                     </NavLink>
-                </li>
-                <li>
-                    <NavLink activeClassName='activePage' to='/about'><BsFillPersonFill size='23px' /> <br />
-                        <small className='icon-text'>ABOUT</small> </NavLink>
                 </li>
                 <li>
                     <NavLink activeClassName='activePage' to='/blogs'><AiFillRead size='23px' /> <br />

@@ -15,8 +15,7 @@ function Contact() {
     const inputFieldClass = 'form-control mb-2 border-dark py-4 rounded-0';
     return (
         <motion.div
-            className='container'
-            style={{ paddingLeft: '100px', paddingTop: '50px' }}
+            className='container sidebar-gap pt-5'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -24,7 +23,7 @@ function Contact() {
         >
             <h3 className="text-center pt-3">Contact</h3>
 
-            <div className="card card-shadow p-5 mt-3">
+            <div className="card card-shadow p-sm-2 p-md-5 mt-3">
                 {notification && <div className={`alert alert-${notification.type}`}>{notification.msg}</div>}
                 <h3 className="text-center">Send your message</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -53,7 +52,7 @@ function Contact() {
                         className={errors.message ? `${inputFieldClass} is-invalid` : inputFieldClass}>
                     </textarea>
                     {errors.message && <div className="invalid-feedback pb-1">Please add some text ..</div>}
-                    <input type="submit" className='btn btn-lg btn-dark rounded-0 mb-5' />
+                    <input type="submit" className='btn btn-md-lg btn-dark rounded-0 mb-5' />
                     <SocialLink />
                 </form>
             </div>

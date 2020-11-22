@@ -11,8 +11,8 @@ function Portfolio() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ delay: 0.2 }}
-            className='portfolio container'
-            style={{ paddingLeft: '100px', paddingTop: '50px' }}>
+            className='portfolio container sidebar-gap pt-5'
+        >
             <h3 className="text-center py-3">Projects</h3>
             <div className="row">
                 {projectData.map(project => <Project key={project.id} project={project} />)}

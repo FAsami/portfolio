@@ -5,3 +5,26 @@
 .blog-img{
     max-height: 300px;
 }
+
+
+
+ul{
+    list-style-type: none;  
+  }
+
+  li{
+      padding-bottom: 10px;
+  }
+  .icon-text{
+      font-size: 10px;
+  }
+  a{
+      text-decoration: none;
+      color: #2F363F;
+  }
+  a:hover{
+      text-decoration: none;
+  }
+  .activePage{
+      color: #0A79DF;
+  }
